@@ -1,22 +1,19 @@
-const heads = document.querySelector('.heads');
-const tails = document.querySelector('.tails');
 const btn = document.querySelector('.btn');
-
-let headsOrTails;
+const main = document.querySelector('.main')
 
 btn.addEventListener('click', flip);
 
 function flip(){
-    if(headsOrTails = Math.random() < 0.5){
-        heads.style.display = 'block';
-        heads.style.opacity = '1';
-        tails.style.display = 'none';
-      } else {
-        heads.style.display = 'none';
-        tails.style.display = 'block';
-        tails.style.opacity = '1';
+  let headsOrTails = Math.random();
+    if(headsOrTails < 0.5){
+        main.innerHTML = `<img class="head flip-vertical-right" src="images/euro-head.png" alt="euro coin head" style="display: block; opacity: 1;">`
+     } else {
+        main.innerHTML = `<img class="tail flip-vertical-right" src="images/euro-tail.png" alt="euro coin tail" style="display: block; opacity: 1;">`
     }
 }
+
+
+
 
 
 
